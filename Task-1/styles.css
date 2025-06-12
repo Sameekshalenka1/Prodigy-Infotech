@@ -1,0 +1,247 @@
+/* Apply global font and smooth scrolling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #f8f9fa;
+}
+
+/* Navbar styles */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background 0.4s ease, box-shadow 0.4s;
+  z-index: 1000;
+}
+
+#navbar.scrolled {
+  background: linear-gradient(to right, #434190, #6366f1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.nav-menu li {
+  margin: 0 20px;
+}
+
+.nav-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 0%;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ffeb3b;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+/* Content sections */
+main section {
+  height: 100vh;
+  padding-top: 120px;
+  text-align: center;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+main section:nth-child(even) {
+  background: #f1f3f5;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #202a75, #764ba2);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #ffeb3b;
+  color: #333;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #fff176;
+  transform: translateY(-3px);
+}
+
+/* Services Section */
+.services {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #f1f3f5;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  padding: 30px 20px;
+  max-width: 300px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  color: #4e54c8;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* About Section */
+.about {
+  background: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.about p {
+  font-size: 1.125rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Contact Section */
+.contact {
+  background: #f1f3f5;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4e54c8;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(78, 84, 200, 0.2);
+}
+
+.contact-form .btn {
+  background-color: #4e54c8;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.contact-form .btn:hover {
+  background-color: #3c40a0;
+}
+
